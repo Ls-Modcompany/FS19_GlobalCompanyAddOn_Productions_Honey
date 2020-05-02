@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="pallet">
+    <storeData>
+        <name>$l10n_GlobalCompanyPlaceable_Productions_Honey_shopItem_honeyCombFull</name>
+        <functions>
+            <function>$l10n_GlobalCompanyPlaceable_Productions_Honey_shopItem_function_honeyCombFull</function>
+        </functions>
+        <image>data/store/store_empty.png</image>
+        <category>pallets</category>
+        <brand>GCPLACEABLEPRODUCTIONS</brand>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+
+    <base>
+        <filename>items/HoneyCombFull.i3d</filename>
+        <size width="0.85" length="0.8" />
+        <input allowed="false"/>
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="10"/>
+        </components>
+    </base>
+
+    <gcExtendedFilltype filltype="honeyCombFull" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="honeyComb_main_component1"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="honeyComb_main_component1" node="0>" />
+    </i3dMappings>
+</vehicle>

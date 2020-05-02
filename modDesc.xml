@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="47">
+    <author>LsModcompany / kevink98</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>GlobalCompany - Productions - Honey</en>
+        <de>GlobalCompany - Productions - Honig</de>
+    </title>
+    <description>
+        <en><![CDATA[Productions
+
+
+Information: Mod only playable in combination with GlobalCompany and GlobalCompany - Productions!]]></en>
+        <de><![CDATA[Productions
+
+
+
+Information: Mod nur in Verbindung mit GlobalCompany und GlobalCompany - Productions spielbar!]]></de>
+    </description>
+    <iconFilename>icon_productionHoney.dds</iconFilename>
+    <multiplayer supported="true" />
+
+    <storeItems>
+        <storeItem xmlFilename="items/HoneyComb.xml" />
+        <storeItem xmlFilename="items/HoneyCombFull.xml" />
+        <storeItem xmlFilename="items/HoneyBox.xml" />
+        <storeItem xmlFilename="items/HoneyBoxFull.xml" />
+    </storeItems>
+	
+	<extraSourceFiles>
+		<sourceFile filename="GC_Checker.lua" />
+    </extraSourceFiles>
+    
+    <brands>
+        <brand name="GCPLACEABLEPRODUCTIONS" title="GlobalCompany Productions" image="../FS19_GlobalCompanyPlaceable_Productions/brand_placeableProductions.dds"/>
+    </brands>
+	<globalCompany minimumVersion="1.5.0.0" />
+</modDesc>
