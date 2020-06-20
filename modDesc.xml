@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="47">
+<modDesc descVersion="49">
     <author>LsModcompany / kevink98</author>
     <version>1.0.0.0</version>
     <title>
@@ -7,12 +7,52 @@
         <de>GlobalCompany - Productions - Honig</de>
     </title>
     <description>
-        <en><![CDATA[Productions
+        <en><![CDATA[Productions - Honey extension
 
+You want to get into the honey production? No problem!
+
+Honey house:
+Cost - 2.000€
+maintenance costs - 10€ / day
+
+The honey house must be placed first. Empty honeycombs and of course bees are needed. If honey was collected, full honeycombs can be taken out.
+
+
+Honey extractor:
+Costs - 5.000€
+
+In the honey extractor the honey is taken from the full honeycombs. The honey can be filled into a bucket. The empty honeycombs can then be put back into the honey house 
+to be brought.
+
+
+Honey bottling station:
+Cost - 15.000€
+
+In this filling station the honey is now filled into jars. Empty jars and of course honey are needed for this.
 
 Information: Mod only playable in combination with GlobalCompany and GlobalCompany - Productions!]]></en>
-        <de><![CDATA[Productions
+        <de><![CDATA[Productions - Honigerweiterung
 
+Du willst in die Honigprodukion einsteigen? Kein Problem!
+
+Honighaus:
+Kosten - 2.000€
+Unterhaltskosten - 10€ / Tag
+
+Das Honighaus muss zunächst platziert werden. Es werden leere Honigwaben und natürlich Bienen benötigt. Wurde Honig gesammelt, könne volle Honigwaben entnommen werden.
+
+
+Honigschleuder:
+Kosten - 5.000€
+
+In der Honigschleuder wird der Honig aus den vollen Honigwaben geholt. Der Honig kann in einen Eimer gefüllt werden. Die leeren Honigwaben können dann wieder in das Honighaus 
+gebracht werden.
+
+
+Honig-Abfüllstation:
+Kosten - 15.000€
+
+In dieser Abfüllstation wird der Honig nun in Gläsern abgefüllt. Dazu werden leere Gläser benötigt und natürlich Honig.
 
 
 Information: Mod nur in Verbindung mit GlobalCompany und GlobalCompany - Productions spielbar!]]></de>
@@ -25,14 +65,37 @@ Information: Mod nur in Verbindung mit GlobalCompany und GlobalCompany - Product
         <storeItem xmlFilename="items/HoneyCombFull.xml" />
         <storeItem xmlFilename="items/HoneyBox.xml" />
         <storeItem xmlFilename="items/HoneyBoxFull.xml" />
+        <storeItem xmlFilename="items/HoneyExtractor.xml" />
+        <storeItem xmlFilename="items/HoneyHouse.xml" />
+        <storeItem xmlFilename="items/BeeBox.xml" />
+        <storeItem xmlFilename="items/HoneyFillStation.xml" />
     </storeItems>
 	
 	<extraSourceFiles>
-		<sourceFile filename="GC_Checker.lua" />
+		<sourceFile filename="scripts/GC_Checker.lua" />
     </extraSourceFiles>
     
+	<specializations>
+        <specialization name="gcExtendedFillType" className="GC_SpecExtendedFillType" filename="../FS19_GlobalCompany/vehicles/specializations/ExtendedFillType.lua"/>
+        <specialization name="gcProductionFactory" className="GC_SpecProductionFactory" filename="../FS19_GlobalCompany/vehicles/specializations/ProductionFactory.lua"/>
+ 	</specializations>  
+
+	<vehicleTypes>
+        <type name="gcProductionItem" parent="base" filename="$dataS/scripts/vehicles/Vehicle.lua">	
+            <specialization name="tensionBeltObject" />	
+			<specialization name="gcExtendedFillType"/>			
+        </type>
+        <type name="gcProductionItemNone" parent="base" filename="$dataS/scripts/vehicles/Vehicle.lua">	
+            <specialization name="tensionBeltObject" />			
+        </type>
+        <type name="gcProductionFactoryVehicle" parent="base" filename="$dataS/scripts/vehicles/Vehicle.lua">	
+            <specialization name="tensionBeltObject" />	
+			<specialization name="gcProductionFactory"/>				
+        </type>
+	</vehicleTypes>
+
     <brands>
-        <brand name="GCPLACEABLEPRODUCTIONS" title="GlobalCompany Productions" image="../FS19_GlobalCompanyPlaceable_Productions/brand_placeableProductions.dds"/>
+        <brand name="GCRODUCTIONS" title="GlobalCompany Productions" image="../FS19_GlobalCompanyAddOn_Productions/brand_productions.dds"/>
     </brands>
-	<globalCompany minimumVersion="1.5.0.0" />
+	<globalCompany minimumVersion="1.6.0.1" />
 </modDesc>

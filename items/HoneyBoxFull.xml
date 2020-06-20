@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="gcProductionItem">
+    <storeData>
+        <name>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_honeyBoxFull</name>
+        <functions>
+            <function>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyBoxFull</function>
+        </functions>
+        <image>items/store_honeyBoxFull.dds</image>
+        <price>50</price>
+        <category>gcProductionHoney</category>
+        <brand>GCRODUCTIONS</brand>
+        <canBeSold>false</canBeSold>
+        <showInStore>false</showInStore>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+
+    <base>
+        <filename>items/HoneyBoxFull.i3d</filename>
+        <size width="0.5" length="0.8" />
+        <input allowed="false"/>
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="1.5"/>
+        </components>
+    </base>
+
+    <gcExtendedFilltype filltype="HONEYBOXFULL" startFillLevel="1" capacity="1" deleteWhenEmpty="true" />
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="honeyBoxFull_main_component1"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="honeyBoxFull_main_component1" node="0>" />
+    </i3dMappings>
+</vehicle>

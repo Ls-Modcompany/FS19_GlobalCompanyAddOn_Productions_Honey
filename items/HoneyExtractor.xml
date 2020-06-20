@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="gcProductionFactoryVehicle">
+    <storeData>
+        <name>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_honeyExtractor</name>
+        <functions>
+            <function>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyExtractor</function>
+        </functions>
+        <image>items/store_honeyExtractor.dds</image>
+        <price>5000</price>
+        <category>gcProductionHoney</category>
+        <brand>GCRODUCTIONS</brand>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+
+    <base>
+        <filename>items/HoneyExtractor.i3d</filename>
+        <size width="1.6" length="1.6" />
+        <input allowed="false"/>
+        <canBeReset>true</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="30"/>
+        </components>
+    </base>
+
+    <productionFactories>
+		<productionFactory indexName="HONEYEXTRACTOR" refPoint="honeyExtractor_main_component1">
+			<guiInformation title="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyExtractor" imageFilename="items/store_honeyExtractor.dds" description="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyExtractor" cameraFeed="gui_camera" />
+			
+			<operation updateDelayMinutes="1" showInGlobalGUI="true" />
+									
+			<registerInputProducts>				
+				<inputProduct name="IP_HONEYCOMBFULL" capacity="4" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" > 
+					<fillTypes>
+						<fillType name="HONEYCOMBFULL" isExtend="true" />
+					</fillTypes>										
+					<inputMethods>
+						<extendedFillTypesTrigger node="InputTrigger"/>
+					</inputMethods>	
+                    <visibilityNodes>
+                        <nodeGroup node="visNodesIP" />
+                    </visibilityNodes>
+				</inputProduct>			
+			</registerInputProducts>
+			
+			<registerOutputProducts>
+				<outputProduct name="OP_HONEYCOMB" fillType="HONEYCOMB" isExtend="true" capacity="4" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_output" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" >
+					<outputMethods>
+                        <objectSpawner xmlFilename="items/HoneyComb.xml" capacity="1" >
+                            <area startNode="start1" endNode="end1" />
+                        </objectSpawner>
+					</outputMethods>
+                    <visibilityNodes>
+                        <nodeGroup node="visNodesOP" />
+                    </visibilityNodes>
+				</outputProduct>
+				<outputProduct name="OP_HONEY" fillType="HONEY" isExtend="true" capacity="40" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_line1" >
+					<outputMethods>
+						<extendedFilltypesFillTrigger node="OutputTrigger" fillLitersPerSecond="2" effect="unloadingEffect"/>
+					</outputMethods>                    
+                    <movers>
+                        <mover node="plane">
+                            <translation minimum="0 0.565 0" maximum="0 0.723 0" />
+                        </mover>
+                    </movers>	
+				</outputProduct>
+			</registerOutputProducts>
+			
+			<productLines>
+				<productLine autoLineStart="true" outputPerHour="30" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_line1" showInGUI="true">
+					<inputs>
+						<inputProduct name="IP_HONEYCOMBFULL" percent="100" />
+					</inputs>	
+					<outputs>
+						<outputProduct name="OP_HONEYCOMB" percent="100" />
+						<outputProduct name="OP_HONEY" percent="500" />
+					</outputs>
+					<playerTrigger playerTriggerNode="PlayerTrigger" showPopupUI="true"/>	
+					<operatingParts>
+						<animationNodeGroups>
+							<animationNodes>
+								<animationNode node="Drehgitter" rotAxis="2" rotSpeed="1000" turnOnFadeTime="3" turnOffFadeTime="3" />
+							</animationNodes>						
+						</animationNodeGroups>						
+					
+                        <sounds>		
+                            <sound>
+                                <sample template="SLURRY_03" linkNode="Scheibe2" />
+                            </sound>
+                        </sounds>
+					</operatingParts>
+				</productLine>	
+			</productLines>		
+
+            <registerAnimations>                    
+                <animation name="deckelAnimation" looping="false" doSynch="true">
+                    <part node="Scheibe2" startTime="0" endTime="2" startRot="0 0 0" endRot="79.331 0 0" />                        
+                    <part node="InputTrigger" startTime="1.9" endTime="2" startTrans="0 -1.26567209 -0.46263799" endTrans="0 1.30385995 -0.46263799" />                        
+                </animation>
+            </registerAnimations>
+
+            <movingParts>
+                <movingPart playerTriggerNode="MovingPartNode" axis="IMPLEMENT_EXTRA2" animation="deckelAnimation" posText="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_openDoor" negText="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_closeDoor" />
+            </movingParts>					
+		</productionFactory>
+	</productionFactories>
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="mesh"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="honeyExtractor_main_component1" node="0>" />
+        <i3dMapping id="visNodesIP" node="0>4|0"/>
+        <i3dMapping id="visNodesOP" node="0>4|1"/>
+        <i3dMapping id="Drehgitter" node="0>4"/>
+        <i3dMapping id="Scheibe2" node="0>2"/>
+        <i3dMapping id="gui_camera" node="0>5"/>
+        <i3dMapping id="PlayerTrigger" node="0>6"/>
+        <i3dMapping id="InputTrigger" node="0>7"/>
+        <i3dMapping id="OutputTrigger" node="0>9"/>
+        <i3dMapping id="start1" node="0>8|0"/>
+        <i3dMapping id="end1" node="0>8|0|0"/>
+        <i3dMapping id="plane" node="0>10"/>
+        <i3dMapping id="mesh" node="0>12"/>
+        <i3dMapping id="unloadingEffect" node="0>13"/>
+        <i3dMapping id="MovingPartNode" node="0>14"/>
+    </i3dMappings>
+</vehicle>

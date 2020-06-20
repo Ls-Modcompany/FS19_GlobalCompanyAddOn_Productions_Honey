@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<globalCompany>	
+   <fillTypeManager filename="xml/gc_fillTypes.xml"/>
+
+    <shopManager>
+        <addCategories>
+            <category type="OBJECT" name="gcProductionHoney" title="$l10n_GlobalCompanyAddOn_Productions_Honey_category_honey" image="items/store_honeyComb.dds" />
+            <category type="PLACEABLE" name="gcProductionHoneyPlaceable" title="$l10n_GlobalCompanyAddOn_Productions_Honey_category_honey" image="items/store_honeyHouse.dds" />
+        </addCategories>
+        
+        <sortCategories>
+            <category type="OBJECT" name="gcProductionHoney" after="objectMisc" />
+            <category type="PLACEABLE" name="gcProductionHoneyPlaceable" after="globalCompanyPlaceable" />
+        </sortCategories>
+    </shopManager>
+
+</globalCompany>

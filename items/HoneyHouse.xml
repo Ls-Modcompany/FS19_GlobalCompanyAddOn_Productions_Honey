@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable>
+    <storeData>
+        <name>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_honeyHouse</name>
+        <functions>
+            <function>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyHouse</function>
+        </functions>
+        <image>items/store_honeyHouse.dds</image>
+        <price>2000</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>GCPLACEABLE</brand>
+        <specs>
+            <capacity>14</capacity>
+        </specs>
+        <species>placeable</species>
+        <category>gcProductionHoneyPlaceable</category>
+    </storeData>
+
+    <placeableType>GC_ProductionFactoryPlaceable</placeableType>
+    <filename>items/HoneyHouse.i3d</filename>
+    <placement testSizeX="2" testSizeZ="2" sizeX="1.5" sizeZ="1" useRandomYRotation="false" useManualYRotation="true" />
+	
+	<tipOcclusionUpdateArea sizeX="15" sizeZ="8" />	
+	
+	<clearAreas>
+        <clearArea startIndex="10|0" widthIndex="10|1" heightIndex="10|2"/>
+    </clearAreas>
+	
+	<leveling requireLeveling="true" maxSmoothDistance="5" maxSlope="30" maxEdgeAngle="20" >
+        <levelAreas>
+            <levelArea startNode="10|0" widthNode="10|1" heightNode="10|2"/>
+        </levelAreas>
+    </leveling>
+	
+	<productionFactories>
+		<productionFactory indexName="HONEYHOUSE" saveId="globalCompany_honeyHouse">
+			<guiInformation title="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyHouse" imageFilename="items/store_honeyHouse.dds" description="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyHouse" cameraFeed="gui_camera"/>
+			
+			<operation updateDelayMinutes="2" showInGlobalGUI="true" />
+			
+			<registerInputProducts>				
+				<inputProduct name="IP_HONEYCOMB" capacity="14" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_output" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" > 
+					<fillTypes>
+						<fillType name="HONEYCOMB" isExtend="true" />
+					</fillTypes>										
+					<inputMethods>
+						<extendedFillTypesTrigger node="InputTrigger"/>
+					</inputMethods>	
+                    <visibilityNodes>
+                        <nodeGroup node="InputVis" />
+                    </visibilityNodes>
+				</inputProduct>	
+                <inputProduct name="IP_BEE" capacity="400" title="GlobalCompanyAddOn_Productions_Honey_fillType_bees" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" > 
+					<fillTypes>
+						<fillType name="BEES" isExtend="true" />
+					</fillTypes>										
+					<inputMethods>
+						<extendedFillTypesTrigger node="InputTrigger2"/>
+					</inputMethods>	
+				</inputProduct>	
+			</registerInputProducts>
+			
+			<registerOutputProducts>
+				<outputProduct name="OP_HONEYCOMBFULL" fillType="HONEYCOMBFULL" isExtend="true" capacity="14" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" >
+					<outputMethods>
+                        <objectSpawner xmlFilename="items/HoneyCombFull.xml" capacity="1" >
+                            <area startNode="start1" endNode="end1" />
+                        </objectSpawner>
+					</outputMethods>
+                    <visibilityNodes>
+                        <nodeGroup node="OutputVis" />
+                    </visibilityNodes>
+				</outputProduct>
+			</registerOutputProducts>
+			
+			<productLines>
+				<productLine autoLineStart="true" outputPerHour="1" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_line1" showInGUI="true">
+					<inputs>
+						<inputProduct name="IP_HONEYCOMB" percent="100" />
+						<inputProduct name="IP_BEE" percent="5" />
+					</inputs>	
+					<outputs>
+						<outputProduct name="OP_HONEYCOMBFULL" percent="100" />
+					</outputs>
+					<playerTrigger playerTriggerNode="PlayerTrigger" showPopupUI="true"/>	
+					<operatingParts>							
+						<sounds>
+							<sound geSoundNode="audio"/>
+						</sounds>
+						<effectTypes>
+							<particleSystems>
+								<particleEffect node="ps" file="particleSystem/bee.i3d" />										
+							</particleSystems>
+						</effectTypes>	
+					</operatingParts>
+				</productLine>
+			</productLines>	
+
+            <registerAnimations>                    
+                <animation name="deckelAnimation" looping="false">
+                    <part node="Deckel" startTime="0" endTime="2" startRot="98.55999756 0 0" endRot="-1.89 0 0" />                        
+                    <part node="InputTrigger" startTime="1.9" endTime="2" startTrans="0 -0.94712543 -0.0414321" endTrans="0 0.87350398 -0.0414321" />                        
+                    <part node="InputTrigger2" startTime="1.9" endTime="2" startTrans="0 -0.94712543 -0.0414321" endTrans="0 0.87350398 -0.0414321" />                        
+                </animation>
+            </registerAnimations>
+
+            <movingParts>
+                <movingPart playerTriggerNode="MovingPartNode" axis="IMPLEMENT_EXTRA2" animation="deckelAnimation" posText="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_openDoor" negText="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_closeDoor" />
+            </movingParts>		
+			
+			<i3dMappings>  
+                <i3dMapping id="Deckel" node="1"/>
+                <i3dMapping id="gui_camera" node="3"/>
+                <i3dMapping id="PlayerTrigger" node="4"/>
+                <i3dMapping id="InputTrigger" node="5"/>
+                <i3dMapping id="start1" node="6|0"/>
+                <i3dMapping id="end1" node="6|0|0"/>
+                <i3dMapping id="MovingPartNode" node="7"/>
+                <i3dMapping id="InputVis" node="8"/>
+                <i3dMapping id="OutputVis" node="9"/>
+                <i3dMapping id="audio" node="11"/>
+                <i3dMapping id="ps" node="12"/>
+                <i3dMapping id="InputTrigger2" node="13"/>
+			</i3dMappings>				
+		</productionFactory>
+	</productionFactories>
+</placeable>

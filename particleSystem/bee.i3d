@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="maya1" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="textures/beehiveParticle_diffuse.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="4" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="lambert2" materialId="5" alphaBlending="true">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="bee.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+    <ParticleSystem name="emitter1Ref" dynamicId="1" type="sprite" rate="0.005" lifespan="2796.52" maxCount="100" emitStopTime="400" speed="0.003" speedRandom="0.002" tangentSpeed="0.2" normalSpeed="1" emitterShapeVelocityScale="1" spriteScaleX="0.05" spriteScaleY="0.05" blendFactor="0.908496" blendInFactor="0" blendOutFactor="0.950001" textureAtlasSizeX="4">
+      <Gravity force="0 0.2 0"/>
+    </ParticleSystem>
+  </Dynamics>
+
+  <Scene>
+    <Dynamic dynamicId="1" emitterShapeNodeId="12" name="emitter1" rotation="0 0 -5.7429e-06" clipDistance="200" nodeId="11" materialIds="5" distanceBlending="false">
+      <Shape shapeId="2" name="emitterShape" visibility="false" nodeId="12" materialIds="4" castsShadows="true" receiveShadows="true"/>
+    </Dynamic>
+  </Scene>
+
+</i3D>

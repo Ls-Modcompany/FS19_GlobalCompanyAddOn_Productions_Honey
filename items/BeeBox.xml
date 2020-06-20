@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="gcProductionItem">
+    <storeData>
+        <name>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_beeBox</name>
+        <functions>
+            <function>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_function_beeBox</function>
+        </functions>
+        <specs>
+            <capacity>100</capacity>
+        </specs>
+        <price>70</price>
+        <image>items/store_beeBox.dds</image>
+        <category>gcProductionHoney</category>
+        <brand>GCRODUCTIONS</brand>
+        <canBeSold>false</canBeSold>
+        <showInStore>true</showInStore>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+
+    <base>
+        <filename>items/BeeBox.i3d</filename>
+        <size width="0.8" length="0.6" />
+        <input allowed="false"/>
+        <canBeReset>false</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="10"/>
+        </components>
+    </base>
+ 
+    <gcExtendedFilltype filltype="BEES" startFillLevel="100" capacity="100" deleteWhenEmpty="true" />
+ 
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="beeBox_main_component1"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <i3dMappings>
+        <i3dMapping id="beeBox_main_component1" node="0>" />
+    </i3dMappings>
+</vehicle>

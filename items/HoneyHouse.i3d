@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="maya1" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.2.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="2" filename="$data/shared/default_normal.dds"/>
+    <File fileId="9" filename="$data/shared/default_specular.dds"/>
+    <File fileId="10" filename="textures/honeycomb.dds"/>
+    <File fileId="11" filename="textures/honeycombFull.dds"/>
+    <File fileId="3" filename="textures/stockTexture_specular.png"/>
+    <File fileId="12" filename="../sounds/beehive.ogg"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert2" materialId="4">
+      <Texture fileId="11"/>
+    </Material>
+    <Material name="lambert2" materialId="5">
+      <Texture fileId="10"/>
+    </Material>
+    <Material name="lambert1" materialId="9" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="9"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.69 0.25 0.05 14"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="lambert1" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="house" materialId="6" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="4" customShaderVariation="colorMask">
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <CustomParameter name="RDT" value="0 0 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.58 0.27 0.1 14"/>
+      <CustomParameter name="colorMat1" value="0.4 0.24 0.1 14"/>
+      <CustomParameter name="colorMat2" value="0.4 0.24 0.1 14"/>
+      <CustomParameter name="colorMat3" value="0.2 0.2 0.2 4"/>
+      <CustomParameter name="colorMat4" value="0.4 0.24 0.1 14"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="coli" materialId="8" diffuseColor="0.494118 0.529412 0.494118 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="HoneyHouse.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="honeyHouse_main_component1" static="true" nodeId="27" materialIds="6" nonRenderable="true" distanceBlending="false">
+      <Shape shapeId="2" name="vis" static="true" nodeId="28" materialIds="6" castsShadows="true" receiveShadows="true"/>
+      <Shape shapeId="3" name="Deckel" translation="0.003 1.47128 -0.498" rotation="98.56 -0 0" nodeId="29" materialIds="6" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="colis" nodeId="30">
+          <Shape shapeId="4" name="coli9" translation="-0.00271804 -0.0183797 0.0128637" rotation="-8.11694 0 0" scale="1.53236 1.17951 0.738334" kinematic="true" collisionMask="8194" density="0.0001" nodeId="31" materialIds="8" nonRenderable="true" distanceBlending="false"/>
+          <Shape shapeId="4" name="coli10" translation="-0.00271804 0.909003 -0.131707" rotation="-8.11694 0 0" scale="0.244197 0.0549945 2.00392" kinematic="true" collisionMask="8194" density="0.0001" nodeId="32" materialIds="8" nonRenderable="true" distanceBlending="false"/>
+        </TransformGroup>
+      </Shape>
+      <TransformGroup name="colis" visibility="false" nodeId="33">
+        <Shape shapeId="5" name="coli1" static="true" collisionMask="8194" density="0.0001" nodeId="34" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="6" name="coli2" static="true" collisionMask="8194" density="0.0001" nodeId="35" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="7" name="coli3" static="true" collisionMask="8194" density="0.0001" nodeId="36" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="8" name="coli4" static="true" collisionMask="8194" density="0.0001" nodeId="37" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="9" name="coli5" static="true" collisionMask="8194" density="0.0001" nodeId="38" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="10" name="coli6" static="true" collisionMask="8194" density="0.0001" nodeId="39" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="11" name="coli7" static="true" collisionMask="8194" density="0.0001" nodeId="40" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        <Shape shapeId="12" name="coli8" static="true" collisionMask="8194" density="0.0001" nodeId="41" materialIds="8" castsShadows="true" receiveShadows="true"/>
+      </TransformGroup>
+      <Camera name="gui_camera" translation="0.060339 2.20751 2.32176" rotation="-29.5646 1.05541 -1.5052e-07" nodeId="42" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
+      <Shape shapeId="13" name="PlayerTrigger" translation="0 0 0.487" kinematic="true" trigger="true" collisionMask="1048576" clipDistance="300" nodeId="43" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="14" name="InputTrigger" translation="0 0.873504 -0.0414321" kinematic="true" trigger="true" collisionMask="18243" clipDistance="300" nodeId="44" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="SpawnPlaces" nodeId="45">
+        <TransformGroup name="start1" translation="-2.08359 -9.95483e-07 1.15777" rotation="-2.19023e-13 0 -1.00179e-05" nodeId="46">
+          <TransformGroup name="end1" translation="4 0 0" nodeId="47"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape shapeId="13" name="MovingPartNode" translation="0 0 0.487" kinematic="true" trigger="true" collisionMask="1048576" clipDistance="300" nodeId="48" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <TransformGroup name="InputVis" nodeId="49">
+        <Shape shapeId="15" name="vis" translation="-0.7 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="50" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="51" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.6 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="52" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="53" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.5 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="54" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="55" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.4 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="56" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="57" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.3 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="58" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="59" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.2 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="60" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="61" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.1 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="62" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="63" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="64" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="65" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.1 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="66" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="67" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.2 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="68" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="69" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.3 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="70" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="71" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.4 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="72" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="73" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.5 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="74" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="75" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.6 1 -0.000437757" rotation="0 -90 -90" clipDistance="300" nodeId="76" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="77" materialIds="5" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="OutputVis" nodeId="78">
+        <Shape shapeId="15" name="vis" translation="0.6 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="79" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="80" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.5 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="81" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="82" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.4 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="83" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="84" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.3 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="85" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="86" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.2 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="87" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="88" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0.1 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="89" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="90" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="0 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="91" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="92" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.1 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="93" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="94" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.2 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="95" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="96" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.3 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="97" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="98" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.4 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="99" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="100" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.5 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="101" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="102" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.6 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="103" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="104" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="15" name="vis" translation="-0.7 1 0" rotation="0 -90 -90" clipDistance="300" nodeId="105" materialIds="9" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="16" name="waben" nodeId="106" materialIds="4" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="clearAreas" nodeId="107">
+        <TransformGroup name="startIndex" translation="-0.822 1.90735e-06 0.526657" nodeId="108"/>
+        <TransformGroup name="widthIndex" translation="0.988493 1.91e-06 0.526657" nodeId="109"/>
+        <TransformGroup name="heightIndex" translation="-0.822 1.91e-06 -0.584182" nodeId="110"/>
+      </TransformGroup>
+      <AudioSource name="audio" nodeId="111" fileId="12" range="100" innerRange="30" volume="1" loops="0"/>
+      <TransformGroup name="ps" translation="0.058 0.11739 -0.320783" rotation="0 90 0" nodeId="113"/>
+      <Shape shapeId="14" name="InputTrigger2" translation="0 0.873504 -0.0414321" kinematic="true" trigger="true" collisionMask="18243" clipDistance="300" nodeId="114" materialIds="7" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+</i3D>

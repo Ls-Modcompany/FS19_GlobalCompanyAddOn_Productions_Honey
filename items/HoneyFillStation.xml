@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="gcProductionFactoryVehicle">
+    <storeData>
+        <name>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_honeyFillStation</name>
+        <functions>
+            <function>$l10n_GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyFillStation</function>
+        </functions>
+        <image>items/store_honeyFillStation.dds</image>
+        <price>15000</price>
+        <category>gcProductionHoney</category>
+        <brand>GCRODUCTIONS</brand>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+        <financeCategory>OTHER</financeCategory>
+    </storeData>
+
+    <base>
+        <filename>items/HoneyFillStation.i3d</filename>
+        <size width="3" length="1" />
+        <input allowed="false"/>
+        <canBeReset>true</canBeReset>
+        <components>
+            <component centerOfMass="0 0.1 0" solverIterationCount="10" mass="40"/>
+        </components>
+    </base>
+
+    <productionFactories>
+		<productionFactory indexName="HONEYFILLSTATION" refPoint="honeyFillStation_main_component1">
+			<guiInformation title="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyFillStation" imageFilename="items/store_honeyFillStation.dds" description="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyFillStation" cameraFeed="gui_camera" />
+			
+			<operation updateDelayMinutes="1" showInGlobalGUI="true" />
+									
+			<registerInputProducts>				
+				<inputProduct name="IP_HONEYBOX" capacity="2" title="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_input" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" > 
+					<fillTypes>
+						<fillType name="HONEYBOX" isExtend="true" />
+					</fillTypes>										
+					<inputMethods>
+						<extendedFillTypesTrigger node="InputTrigger"/>
+					</inputMethods>	
+                    <visibilityNodes>
+                        <nodeGroup node="InputVis" />
+                    </visibilityNodes>
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="Display1" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+				</inputProduct>				
+				<inputProduct name="IP_HONEY" capacity="20" title="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_input2" > 
+					<fillTypes>
+						<fillType name="HONEY" isExtend="true" />
+					</fillTypes>										
+					<inputMethods>
+						<extendedFillTypesTrigger node="InputTrigger2" fillLitersPerSecond="5"/>
+					</inputMethods>	                    
+                    <movers>
+                        <mover node="plane">
+                            <translation minimum="0 1.46166551 0" maximum="0 1.92 0" />
+                        </mover>
+                    </movers>
+					<digitalDisplays>
+						<display displayType="LEVEL" numbers="Display2" emptyNumberColor="1 0 0 1" numberColor="1 1 0 1" fullNumberColor="0 1 0 1"/>
+					</digitalDisplays>
+				</inputProduct>		
+			</registerInputProducts>
+			
+			<registerOutputProducts>
+				<outputProduct name="OP_HONEYBOXFULL" fillType="HONEYBOXFULL" isExtend="true" capacity="2" title="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_output" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" >
+					<outputMethods>
+                        <objectSpawner xmlFilename="items/HoneyBoxFull.xml" capacity="1" bitMaskDec="0" >
+                            <area startNode="start1" endNode="end1" />
+                        </objectSpawner>
+					</outputMethods>
+				</outputProduct>
+			</registerOutputProducts>
+			
+			<productLines>
+				<productLine autoLineStart="true" outputPerHour="60" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_line1" showInGUI="true">
+					<inputs>
+						<inputProduct name="IP_HONEYBOX" percent="20" />
+						<inputProduct name="IP_HONEY" percent="100" />
+					</inputs>	
+					<outputs>
+						<outputProduct name="OP_HONEYBOXFULL" percent="20" />
+					</outputs>
+					<playerTrigger playerTriggerNode="PlayerTrigger" showPopupUI="true"/>	
+					<operatingParts>			
+                        <sounds>		
+                            <sound>
+                                <sample template="SLURRY_02" linkNode="plane" />
+                            </sound>
+                        </sounds>
+                        <visibility>
+                            <nodeGroup node="workVis" />
+                        </visibility>                        
+					</operatingParts>
+				</productLine>	
+			</productLines>						
+		</productionFactory>
+	</productionFactories>
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="coli1"/>
+            <meshNode node="coli2"/>
+            <meshNode node="coli3"/>
+            <meshNode node="coli4"/>
+            <meshNode node="coli5"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <baseMaterial>
+        <material name="vis_mat" baseNode="vis">
+            <shaderParameter name="colorMat2" value="AGRISEM_YELLOW1"/>
+        </material>
+    </baseMaterial>
+
+    <baseMaterialConfigurations price="50" useDefaultColors="true" defaultColorIndex="20">
+        <material name="vis_mat" shaderParameter="colorMat2" />
+    </baseMaterialConfigurations>
+
+    <i3dMappings>
+        <i3dMapping id="honeyFillStation_main_component1" node="0>" />
+        <i3dMapping id="plane" node="0>1"/>
+        <i3dMapping id="gui_camera" node="0>5"/>
+        <i3dMapping id="PlayerTrigger" node="0>6"/>
+        <i3dMapping id="InputTrigger" node="0>7"/>
+        <i3dMapping id="start1" node="0>8|0"/>
+        <i3dMapping id="end1" node="0>8|0|0"/>
+        <i3dMapping id="InputTrigger2" node="0>9"/>
+        <i3dMapping id="Display1" node="0>10"/>
+        <i3dMapping id="Display2" node="0>11"/>
+        <i3dMapping id="InputVis" node="0>12"/>
+        <i3dMapping id="coli1" node="0>4|0"/>
+        <i3dMapping id="coli2" node="0>4|1"/>
+        <i3dMapping id="coli3" node="0>4|2"/>
+        <i3dMapping id="coli4" node="0>4|3"/>
+        <i3dMapping id="coli5" node="0>4|4"/>
+        <i3dMapping id="vis" node="0>0"/>
+        <i3dMapping id="workVis" node="0>13"/>
+    </i3dMappings>
+</vehicle>

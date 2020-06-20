@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map>
+    <extendedFillTypes>
+        <fillType name="HONEY" title="GlobalCompanyAddOn_Productions_Honey_fillType_honey">            
+            <color mat="1 0.43 0 5" />
+        </fillType>
+        <fillType name="HONEYCOMB" title="GlobalCompanyAddOn_Productions_Honey_fillType_honeyComb">            
+            <pallet filename="items/HoneyComb.xml" />
+        </fillType>
+        <fillType name="HONEYCOMBFULL" title="GlobalCompanyAddOn_Productions_Honey_fillType_honeyCombFull">
+            <pallet filename="items/HoneyCombFull.xml" />
+        </fillType>
+        <fillType name="HONEYBOX" title="GlobalCompanyAddOn_Productions_Honey_fillType_honeyBox">
+            <pallet filename="items/HoneyBox.xml" />
+        </fillType>
+        <fillType name="HONEYBOXFULL" title="GlobalCompanyAddOn_Productions_Honey_fillType_honeyBoxFull">
+            <pallet filename="items/HoneyBoxFull.xml" />
+        </fillType>
+        <fillType name="BEES" title="GlobalCompanyAddOn_Productions_Honey_fillType_bees">
+            <pallet filename="items/Bees.xml" />
+        </fillType>
+    </extendedFillTypes>   
+    
+    <extendedFillTypesCategories>
+        <extendedFillTypesCategory name="LIQUID" fillTypes="HONEY" />
+    </extendedFillTypesCategories>         
+</map>
