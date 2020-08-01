@@ -31,7 +31,7 @@
 			<operation updateDelayMinutes="1" showInGlobalGUI="true" />
 									
 			<registerInputProducts>				
-				<inputProduct name="IP_HONEYBOX" capacity="2" title="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_input" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" > 
+				<inputProduct name="IP_HONEYBOX" capacity="16" title="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_input" unitLang="GlobalCompanyAddOn_Productions_unit_glass" > 
 					<fillTypes>
 						<fillType name="HONEYBOX" isExtend="true" />
 					</fillTypes>										
@@ -64,9 +64,9 @@
 			</registerInputProducts>
 			
 			<registerOutputProducts>
-				<outputProduct name="OP_HONEYBOXFULL" fillType="HONEYBOXFULL" isExtend="true" capacity="2" title="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_output" unitLang="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" >
+				<outputProduct name="OP_HONEYBOXFULL" fillType="HONEYBOXFULL" isExtend="true" capacity="16" title="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_output" unitLang="GlobalCompanyAddOn_Productions_unit_glass" >
 					<outputMethods>
-                        <objectSpawner xmlFilename="items/HoneyBoxFull.xml" capacity="1" bitMaskDec="0" >
+                        <objectSpawner xmlFilename="items/HoneyBoxFull.xml" capacity="8" bitMaskDec="0" >
                             <area startNode="start1" endNode="end1" />
                         </objectSpawner>
 					</outputMethods>
@@ -76,11 +76,11 @@
 			<productLines>
 				<productLine autoLineStart="true" outputPerHour="60" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_line1" showInGUI="true">
 					<inputs>
-						<inputProduct name="IP_HONEYBOX" percent="20" />
+						<inputProduct name="IP_HONEYBOX" percent="200" />
 						<inputProduct name="IP_HONEY" percent="100" />
 					</inputs>	
 					<outputs>
-						<outputProduct name="OP_HONEYBOXFULL" percent="20" />
+						<outputProduct name="OP_HONEYBOXFULL" percent="200" />
 					</outputs>
 					<playerTrigger playerTriggerNode="PlayerTrigger" showPopupUI="true"/>	
 					<operatingParts>			

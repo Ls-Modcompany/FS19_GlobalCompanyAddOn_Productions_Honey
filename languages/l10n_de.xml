@@ -13,7 +13,7 @@
 		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyExtractor" v="Honigschleuder"/>
 		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyExtractor" v="Mit einer Honigschleuder kannst du den Honig aus den Waben schleudern."/>
 		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyHouse" v="Honigraum"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyHouse" v="In einem Honigraum leben Bienen und sammeln Honig"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyHouse" v="In einem Honigraum leben Bienen und sammeln Honig."/>
 		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_beeBox" v="Bienen"/>
 		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_beeBox" v="Bienen sammeln Honig."/>
 		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyFillStation" v="Honig-Abfüllanlage"/>
@@ -38,8 +38,6 @@
 		<e k="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_output" v="Honigbox voll"/>
 
 		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_openDoor" v="Deckel öffnen"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_closeDoor" v="Deckel schließen"/>
-		
-    
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_closeDoor" v="Deckel schließen"/>    
     </elements>
 </l10n>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="maya1" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="1" filename="textures/Global_Company_Productions.dds" />
+  </Files>
+
+  <Materials>
+    <Material name="decal" materialId="1" specularColor="0 0 0" ambientColor="1 1 1">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="decal_3.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="____old" translation="0 0 48.1266" nodeId="1">
+      <Shape name="Decal1" translation="0 0 11.0737" scale="1 2.94406 1" shapeId="1" static="true" castsShadows="true" receiveShadows="true" materialIds="1" nodeId="2"/>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+  </UserAttributes>
+</i3D>

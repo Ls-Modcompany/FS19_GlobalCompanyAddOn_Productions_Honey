@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="49">
-    <author>LsModcompany / kevink98</author>
+    <author>LsModcompany / kevink98, Eribus</author>
     <version>1.0.0.0</version>
     <title>
         <en>GlobalCompany - Productions - Honey</en>
         <de>GlobalCompany - Productions - Honig</de>
     </title>
     <description>
-        <en><![CDATA[Productions - Honey extension
+        <en><![CDATA[Extension to productions - honey
 
 You want to get into the honey production? No problem!
 
@@ -31,7 +31,7 @@ Cost - 15.000€
 In this filling station the honey is now filled into jars. Empty jars and of course honey are needed for this.
 
 Information: Mod only playable in combination with GlobalCompany and GlobalCompany - Productions!]]></en>
-        <de><![CDATA[Productions - Honigerweiterung
+        <de><![CDATA[Erweiterung zu Produktionen - Honig
 
 Du willst in die Honigprodukion einsteigen? Kein Problem!
 
@@ -97,5 +97,5 @@ Information: Mod nur in Verbindung mit GlobalCompany und GlobalCompany - Product
     <brands>
         <brand name="GCRODUCTIONS" title="GlobalCompany Productions" image="../FS19_GlobalCompanyAddOn_Productions/brand_productions.dds"/>
     </brands>
-	<globalCompany minimumVersion="1.6.0.1" />
+	<globalCompany minimumVersion="1.7.0.0" />
 </modDesc>

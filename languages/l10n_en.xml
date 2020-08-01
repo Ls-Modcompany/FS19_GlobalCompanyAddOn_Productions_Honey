@@ -2,39 +2,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <l10n>
 	<elements>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyComb" v="Honigwabe"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyComb" v="Honigwaben werden für Bienenstöcke benötigt."/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyCombFull" v="Honigwabe voll"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyCombFull" v="Volle Honigwaben müssen mit der Honigschleuder weiterverarbeitet werden."/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyBox" v="Honigbox"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyBox" v="Eine Honigbox enthält acht leere Gläser Honig. Wird für die Honig-Abfüllstation benötigt."/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyBoxFull" v="Honigbox voll"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyBoxFull" v="Eine volle Honigbox enthält acht Gläser Honig. Dies ist ein Endprodukt und kann verkauft werden."/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyExtractor" v="Honigschleuder"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyExtractor" v="Mit einer Honigschleuder kannst du den Honig aus den Waben schleudern."/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyHouse" v="Honigraum"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyHouse" v="In einem Honigraum leben Bienen und sammeln Honig"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_beeBox" v="Bienen"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_beeBox" v="Bienen sammeln Honig."/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyComb" v="Honeycomb"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyComb" v="Honeycombs are needed for beehives."/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyCombFull" v="Honeycomb full"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyCombFull" v="Whole honeycombs must be further processed with the honey extractor."/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyBox" v="Honey box"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyBox" v="One honey box contains eight empty jars of honey. It is needed for the honey filling station."/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyBoxFull" v="Honey box full"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyBoxFull" v="A full honey box contains eight jars of honey. This is an end product and can be sold."/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyExtractor" v="Honey extractor"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyExtractor" v="With a honey extractor you can centrifuge the honey from the combs."/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyHouse" v="Honey room"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyHouse" v="Bees live and collect honey in a honey room."/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_beeBox" v="Bees"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_beeBox" v="Bees collect honey."/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_honeyFillStation" v="Honey bottling plant"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_shopItem_function_honeyFillStation" v="With this machine liquid honey can be filled into jars ready for sale."/>
         
-		<e k="GlobalCompanyAddOn_Productions_Honey_category_honey" v="Imkereibedarf"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_category_honey" v="Beekeeping supplies"/>
 
-		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honey" v="Honig"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honeyComb" v="Honigwabe"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honeyCombFull" v="Honigwabe voll"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honeyBox" v="Honigbox"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honeyBoxFull" v="Honigbox voll"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_bees" v="Bienen"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honey" v="Honey"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honeyComb" v="Honeycomb"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honeyCombFull" v="Honeycomb full"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honeyBox" v="Honey box"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_honeyBoxFull" v="Honey box full"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_fillType_bees" v="Bees"/>
 
-		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input" v="Honigwaben voll"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_output" v="Honigwaben leer"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_line1" v="Honig"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" v="Stück"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_honeyHouse_output2" v="Bienen"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input" v="Honeycombs full"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_output" v="Honeycombs empty"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_line1" v="Honey"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_input_unit" v="Piece"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyHouse_output2" v="Bees"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_input" v="Honey box empty"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_input2" v="Honey"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyFillStation_output" v="Honey box full"/>
 
-		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_openDoor" v="Deckel öffnen"/>
-		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_closeDoor" v="Deckel schließen"/>
-		
-    
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_openDoor" v="Open cover"/>
+		<e k="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_closeDoor" v="Close cover"/>
     </elements>
 </l10n>

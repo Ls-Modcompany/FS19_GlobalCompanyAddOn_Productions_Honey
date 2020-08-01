@@ -24,7 +24,7 @@
         </components>
     </base>
 
-    <gcExtendedFilltype filltype="HONEYBOX" startFillLevel="1" capacity="1" deleteWhenEmpty="true" />
+    <gcExtendedFilltype filltype="HONEYBOX" startFillLevel="8" capacity="8" deleteWhenEmpty="true" />
 
     <tensionBeltObject>
         <meshNodes>

@@ -10,7 +10,7 @@
         <dailyUpkeep>10</dailyUpkeep>
         <lifetime>1000</lifetime>
         <rotation>0</rotation>
-        <brand>GCPLACEABLE</brand>
+        <brand>GCRODUCTIONS</brand>
         <specs>
             <capacity>14</capacity>
         </specs>
@@ -78,11 +78,11 @@
 			<productLines>
 				<productLine autoLineStart="true" outputPerHour="1" title="GlobalCompanyAddOn_Productions_Honey_honeyExtractor_line1" showInGUI="true">
 					<inputs>
-						<inputProduct name="IP_HONEYCOMB" percent="100" />
+						<inputProduct name="IP_HONEYCOMB" percent="20" />
 						<inputProduct name="IP_BEE" percent="5" />
 					</inputs>	
 					<outputs>
-						<outputProduct name="OP_HONEYCOMBFULL" percent="100" />
+						<outputProduct name="OP_HONEYCOMBFULL" percent="20" />
 					</outputs>
 					<playerTrigger playerTriggerNode="PlayerTrigger" showPopupUI="true"/>	
 					<operatingParts>							
